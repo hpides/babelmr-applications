@@ -1,0 +1,3 @@
+pandas
+fastparquet
+s3fs

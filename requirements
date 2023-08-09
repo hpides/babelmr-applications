@@ -1,0 +1,8 @@
+boto3
+matplotlib
+pyspark
+s3fs
+pandas
+fastparquet
+numpy
+tikzplotlib

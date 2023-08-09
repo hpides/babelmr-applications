@@ -1,0 +1,29 @@
+{
+  "Stores": [
+    10,
+    20,
+    33,
+    40,
+    50
+  ],
+  "Categories": [
+    1,
+    2,
+    3
+  ],
+  "Items": {
+    "bucket": "benchmark-data-sets",
+    "key": "tpcx-bb/standard/parquet/sf1/item/item_0.parquet",
+    "partitions": []
+  },
+  "Sales": {
+    "bucket": "benchmark-data-sets",
+    "key": "tpcx-bb/standard/parquet/sf1/store_sales/0.parquet",
+    "partitions": []
+  },
+  "Export": {
+    "bucket": "rsws2022",
+    "key": "final_result/abcdef/bb-q1.parquet",
+    "number_partitions": 10
+  }
+}

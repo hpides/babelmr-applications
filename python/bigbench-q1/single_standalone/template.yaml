@@ -1,0 +1,27 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  tpc-h-q1-3.9
+  Python UDF executing TPC-H query 1 on lineitems non distributed
+Globals:
+  Function:
+    Timeout: 9000
+
+Resources:
+  PythonNonDistributedUDF:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: udf/
+      Handler: app.lambda_handler
+      MemorySize: 2048
+      Runtime: python3.9
+      Architectures:
+        - x86_64
+
+Outputs:
+  PythonDistributedUDF:
+    Description: "Hello World Lambda Function ARN"
+    Value: !GetAtt PythonNonDistributedUDF.Arn
+  PythonDistributedUDFIamRole:
+    Description: "Implicit IAM Role created for Hello World function"
+    Value: !GetAtt PythonNonDistributedUDFRole.Arn

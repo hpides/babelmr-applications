@@ -1,0 +1,99 @@
+% This file was created with tikzplotlib v0.10.1.
+\begin{tikzpicture}
+
+  \definecolor{cornflowerblue86180233}{RGB}{86,180,233}
+  \definecolor{darkcyan0114178}{RGB}{0,114,178}
+  \definecolor{darkcyan0158115}{RGB}{0,158,115}
+  \definecolor{darkgray176}{RGB}{176,176,176}
+  \definecolor{gold24022866}{RGB}{240,228,66}
+  \definecolor{gray}{RGB}{128,128,128}
+  \definecolor{lightgray204}{RGB}{204,204,204}
+  \definecolor{orange2301590}{RGB}{230,159,0}
+  \definecolor{palevioletred204121167}{RGB}{204,121,167}
+
+  \begin{axis}[
+  height=5cm,
+    axis line style={draw=none},
+  axis x line*=bottom,
+  legend cell align={left},
+  legend columns=2,
+  legend style={
+    fill opacity=0.8,
+    draw opacity=1,
+    text opacity=1,
+    at={(0.4,1.02)},
+    anchor=south,
+    draw=lightgray204
+  },
+  tick align=outside,
+  tick pos=left,
+  width=7cm,
+  x grid style={darkgray176},
+  xlabel={Scale Factor},
+  xmin=-0.5625, xmax=3.5625,
+  xtick style={color=black},
+  xtick={0,1,2,3},
+  xticklabels={1,10,100,1000},
+  y grid style={darkgray176},
+  %ylabel style={yshift=-0.3cm},
+  ylabel={Runtime (seconds)},
+  ymajorgrids,
+  ymin=0, ymax=263.335,
+  ytick style={color=black}
+  ]
+  \addplot [semithick, black, mark=asterisk, mark size=3, mark options={solid}, forget plot]
+  table {%
+  2.15 8
+  };
+  \addplot [semithick, black, mark=asterisk, mark size=3, mark options={solid}, forget plot]
+  table {%
+  3.15 8
+  };
+  \draw[draw=black,fill=orange2301590] (axis cs:-0.375,0) rectangle (axis cs:-0.225,17.2045024394989);
+
+  \addlegendimage{area legend,draw=black,fill=cornflowerblue86180233}
+  \addlegendentry{BabelMR (Go)}
+  \draw[draw=black,fill=orange2301590] (axis cs:0.625,0) rectangle (axis cs:0.775,20.8437256097794);
+  \draw[draw=black,fill=orange2301590] (axis cs:1.625,0) rectangle (axis cs:1.775,22.5867976427078);
+  \draw[draw=black,fill=orange2301590] (axis cs:2.625,0) rectangle (axis cs:2.775,46.9387025117874);
+  \draw[draw=black,fill=cornflowerblue86180233] (axis cs:-0.225,0) rectangle (axis cs:-0.075,17.5028601408005);
+  \addlegendimage{area legend,draw=black,fill=orange2301590}
+  \addlegendentry{BabelMR (Python)}
+
+  \draw[draw=black,fill=cornflowerblue86180233] (axis cs:0.775,0) rectangle (axis cs:0.925,18.377309012413);
+  \draw[draw=black,fill=cornflowerblue86180233] (axis cs:1.775,0) rectangle (axis cs:1.925,23.0002632379532);
+  \draw[draw=black,fill=cornflowerblue86180233] (axis cs:2.775,0) rectangle (axis cs:2.925,42.1713447332382);
+  \draw[draw=black,fill=darkcyan0158115] (axis cs:-0.075,0) rectangle (axis cs:0.075,33.4333990335465);
+  \addlegendimage{area legend,draw=black,fill=darkcyan0158115}
+  \addlegendentry{PyWren (Python)}
+  \addlegendimage{area legend,draw=black,fill=darkcyan0114178,postaction={pattern=north west lines, pattern color=black}}
+  \addlegendentry{PySpark - Static Cluster}
+  \draw[draw=black,fill=darkcyan0158115] (axis cs:0.925,0) rectangle (axis cs:1.075,36.2191775560379);
+  \draw[draw=black,fill=darkcyan0158115] (axis cs:1.925,0) rectangle (axis cs:2.075,49.0249507665634);
+  \draw[draw=black,fill=darkcyan0158115] (axis cs:2.925,0) rectangle (axis cs:3.075,104.308527588844);
+  \draw[draw=black,fill=gold24022866] (axis cs:0.075,0) rectangle (axis cs:0.225,15.7629405975342);
+  \addlegendimage{area legend,draw=black,fill=gold24022866}
+  \addlegendentry{Corral (Go)}
+
+  \draw[draw=black,fill=gold24022866] (axis cs:1.075,0) rectangle (axis cs:1.225,70.7477117300034);
+  \draw[draw=black,fill=gold24022866] (axis cs:2.075,0) rectangle (axis cs:2.225,-2);
+  \draw[draw=black,fill=gold24022866] (axis cs:3.075,0) rectangle (axis cs:3.225,-2);
+  \draw[draw=black,fill=palevioletred204121167] (axis cs:0.225,0) rectangle (axis cs:0.375,65.1);
+  \addlegendimage{area legend,draw=black,fill=palevioletred204121167}
+  \addlegendentry{PySpark - Elastic Cluster}
+
+  \draw[draw=black,fill=palevioletred204121167] (axis cs:1.225,0) rectangle (axis cs:1.375,118.2);
+  \draw[draw=black,fill=palevioletred204121167] (axis cs:2.225,0) rectangle (axis cs:2.375,166.8);
+  \draw[draw=black,fill=palevioletred204121167] (axis cs:3.225,0) rectangle (axis cs:3.375,250.7);
+
+  \draw[draw=black,fill=darkcyan0114178,postaction={pattern=north west lines, pattern color=black}] (axis cs:0.225,0) rectangle (axis cs:0.375,65.3);
+  \draw[draw=black,fill=darkcyan0114178,postaction={pattern=north west lines, pattern color=black}] (axis cs:1.225,0) rectangle (axis cs:1.375,56.3);
+  \draw[draw=black,fill=darkcyan0114178,postaction={pattern=north west lines, pattern color=black}] (axis cs:2.225,0) rectangle (axis cs:2.375,84.4);
+  \draw[draw=black,fill=darkcyan0114178,postaction={pattern=north west lines, pattern color=black}] (axis cs:3.225,0) rectangle (axis cs:3.375,172.2);
+
+  % we want sf 1 elastic cluster in the front
+  %\draw[draw=black,fill=palevioletred204121167] (axis cs:0.225,0) rectangle (axis cs:0.375,65.1);
+      \draw[draw=black] (axis cs:-1.0,0.001) -- (axis cs:16.0,0.001);
+  \end{axis}
+
+  \end{tikzpicture}

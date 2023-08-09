@@ -1,0 +1,107 @@
+% This file was created with tikzplotlib v0.10.1.
+\begin{tikzpicture}
+
+% ATTENTION! COLORS ARE SWAPPEP! (closer to other figures)
+  \definecolor{cornflowerblue86180233}{RGB}{230,159,0}
+  \definecolor{darkcyan0158115}{RGB}{0,158,115}
+  \definecolor{darkgray176}{RGB}{176,176,176}
+  \definecolor{gray}{RGB}{128,128,128}
+  \definecolor{lightgray204}{RGB}{204,204,204}
+  \definecolor{orange2301590}{RGB}{86,180,233}
+
+  \begin{groupplot}[group style={group size=2 by 1}]
+  \nextgroupplot[
+  legend pos = north west,
+  height=5cm,
+  axis line style={draw=none},
+  axis x line*=bottom,
+  legend cell align={left},
+  legend columns=4,
+  legend style={
+    fill opacity=0.8,
+    draw opacity=1,
+    text opacity=1,
+    at={(1.1,1.15)},
+    anchor=south,
+    draw=lightgray204
+  },
+  tick align=outside,
+  tick pos=left,
+  title style={yshift=-0.2cm},
+  title={TPC-H Q1 Python},
+  width=7cm,
+  x grid style={darkgray176},
+  xmin=-0.513, xmax=3.513,
+  xtick style={color=black},
+  xtick={0,1,2,3},
+  xticklabels={1,10,100,1000},
+  y grid style={darkgray176},
+  ylabel={Runtime (seconds)},
+  ymajorgrids,
+  ymin=0, ymax=93.8542906701565,
+  ytick style={color=black}
+  ]
+  \draw[draw=black,fill=orange2301590] (axis cs:-0.33,0) rectangle (axis cs:-0.11,11.1982377529144);
+  \addlegendimage{area legend,draw=black,fill=orange2301590}
+  \addlegendentry{BabelMR}
+
+  \draw[draw=black,fill=orange2301590] (axis cs:0.67,0) rectangle (axis cs:0.89,11.6743640422821);
+  \draw[draw=black,fill=orange2301590] (axis cs:1.67,0) rectangle (axis cs:1.89,13.4031181573868);
+  \draw[draw=black,fill=orange2301590] (axis cs:2.67,0) rectangle (axis cs:2.89,26.0698651790619);
+  \draw[draw=black,fill=cornflowerblue86180233] (axis cs:-0.11,0) rectangle (axis cs:0.11,6.44455397129059);
+  \addlegendimage{area legend,draw=black,fill=cornflowerblue86180233}
+  \addlegendentry{System-side Shuffle}
+
+  \draw[draw=black,fill=cornflowerblue86180233] (axis cs:0.89,0) rectangle (axis cs:1.11,7.06451094150543);
+  \draw[draw=black,fill=cornflowerblue86180233] (axis cs:1.89,0) rectangle (axis cs:2.11,12.2349430799484);
+  \draw[draw=black,fill=cornflowerblue86180233] (axis cs:2.89,0) rectangle (axis cs:3.11,20.7045559644699);
+  \draw[draw=black,fill=darkcyan0158115] (axis cs:0.11,0) rectangle (axis cs:0.33,5.8207391500473);
+  \addlegendimage{area legend,draw=black,fill=darkcyan0158115}
+  \addlegendentry{All Custom}
+
+  \draw[draw=black,fill=darkcyan0158115] (axis cs:1.11,0) rectangle (axis cs:1.33,7.84187233448029);
+  \draw[draw=black,fill=darkcyan0158115] (axis cs:2.11,0) rectangle (axis cs:2.33,15.292777967453);
+  \draw[draw=black,fill=darkcyan0158115] (axis cs:3.11,0) rectangle (axis cs:3.33,89.3850387334824);
+    \draw[draw=black] (axis cs:-1.0,0.001) -- (axis cs:16.0,0.001);
+
+  \nextgroupplot[
+  height=5cm,
+  axis line style={draw=none},
+  axis x line*=bottom,
+  tick align=outside,
+  tick pos=left,
+  title={TPCx-BB Q1 C\#},
+  title style={yshift=-0.2cm},
+  width=7cm,
+  x grid style={darkgray176},
+  xmin=-0.513, xmax=3.513,
+  xtick style={color=black},
+  xtick={0,1,2,3},
+  xticklabels={1,10,100,1000},
+  y grid style={darkgray176},
+  ymajorgrids,
+  ymin=0, ymax=132.501596478224,
+  ytick style={color=black}
+  ]
+  \draw[draw=black,fill=orange2301590] (axis cs:-0.33,0) rectangle (axis cs:-0.11,5.31997647285461);
+  \draw[draw=black,fill=orange2301590] (axis cs:0.67,0) rectangle (axis cs:0.89,9.46195552349091);
+  \draw[draw=black,fill=orange2301590] (axis cs:1.67,0) rectangle (axis cs:1.89,21.0212207555771);
+  \draw[draw=black,fill=orange2301590] (axis cs:2.67,0) rectangle (axis cs:2.89,39.4517742872238);
+  \draw[draw=black,fill=cornflowerblue86180233] (axis cs:-0.11,0) rectangle (axis cs:0.11,5.55321176052094);
+  \draw[draw=black,fill=cornflowerblue86180233] (axis cs:0.89,0) rectangle (axis cs:1.11,18.4481584072113);
+  \draw[draw=black,fill=cornflowerblue86180233] (axis cs:1.89,0) rectangle (axis cs:2.11,21.3363198041916);
+  \draw[draw=black,fill=cornflowerblue86180233] (axis cs:2.89,0) rectangle (axis cs:3.11,28.7358642578125);
+  \draw[draw=black,fill=darkcyan0158115] (axis cs:0.11,0) rectangle (axis cs:0.33,3.33082625865936);
+  \draw[draw=black,fill=darkcyan0158115] (axis cs:1.11,0) rectangle (axis cs:1.33,8.25537061691284);
+  \draw[draw=black,fill=darkcyan0158115] (axis cs:2.11,0) rectangle (axis cs:2.33,25.1032651185989);
+  \draw[draw=black,fill=darkcyan0158115] (axis cs:3.11,0) rectangle (axis cs:3.33,126.191996645927);
+    \draw[draw=black] (axis cs:-1.0,0.001) -- (axis cs:16.0,0.001);
+  \end{groupplot}
+
+  \draw ({$(current bounding box.south west)!0.55!(current bounding box.south east)$}|-{$(current bounding box.south west)!-0.09!(current bounding box.north west)$}) node[
+    scale=0.9,
+    anchor=south,
+    text=black,
+    rotate=0.0
+  ]{\normalsize Scale Factor};
+  \end{tikzpicture}
